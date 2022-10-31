@@ -43,7 +43,7 @@
 
 ### Sprint 3
 
-* [Sprint planning]()
+* [Sprint planning](https://github.com/paceuniversity/cs389f2022team5/blob/main/Sprint3Planning.md)
 * [Scrums]()
 * [Sprint demo video]()
 * [Sprint retrospective]()
