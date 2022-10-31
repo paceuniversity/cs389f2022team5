@@ -1,4 +1,4 @@
-# Sprint Planning
+# Sprint 1 Planning
 
 ## What is your Sprint Goal?
 
