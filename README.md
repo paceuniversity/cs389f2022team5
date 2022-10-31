@@ -50,6 +50,12 @@
 
 ## Tools & APIs
 
+* [GitHub](https://github.com/)
+* [Android Studio](https://developer.android.com/studio)
+* [Discord](https://discord.com/)
+* [Firebase](https://firebase.google.com/)
+* [Google Drive](https://www.google.com/drive/)
+
 ## Final delivery
 
 * [Final presentation]()
