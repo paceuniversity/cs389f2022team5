@@ -30,7 +30,7 @@
 ### Sprint 1
 
 * [Sprint planning](https://github.com/paceuniversity/cs389f2022team5/blob/main/SprintPlanning.md)
-* [Scrums]()
+* [Scrums](https://github.com/paceuniversity/cs389f2022team5/blob/main/Sprint1Scrums.md)
 * [Sprint demo video]()
 * [Sprint retrospective]()
 
