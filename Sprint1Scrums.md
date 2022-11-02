@@ -8,11 +8,11 @@
     
 2.	What will I do until the next Scrum?  
     **Leanna** - Update SprintPlanning.md, Update ReadMe.md, Update Scrum for this meeting, GitHub project/Kanban, Clone repo and make branch. Start tasks.  
-    **CJ** - Update Scrum for this meeting, Create Android Studio project, Push to repo and make branch, commit. Create a framework, start tasks and implementing the US.
+    **CJ** - Update Scrum for this meeting, Create Android Studio project, Push to repo and make branch, commit. Create a framework, start tasks and implementing the US. May have to purchase google maps API key. 
     
 3.	What obstacles are impeding my progress?  
     **Leanna** - It is the start of implementing the project, so it is dificult to figure out how to begin and to orgnize the workflow. I don't have much experience with Android Studio and GitHub so it may take longer to accomplish tasks.  
-    **CJ** - 
+    **CJ** - I need to refresh my mind and become more comfortable with Android studio.
 
 
 
