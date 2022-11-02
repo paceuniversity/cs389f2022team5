@@ -2,12 +2,18 @@
 
 ## What is your Sprint Goal?
 
-* Number of User Stories you will implement during the Sprint
-* User Stories you will implement during the Sprint
-* Velocity you will implement during the Sprint
+* Implement 7 User Stories
+* User Stories: 
+ * US13 - Locate Nearest Donation Sites (drop off)
+ * US3 - Current Location
+ * US5 - Get List of Organizations
+ * US6 - Google Maps
+ * US8 - Donation Form
+ * US9 - Donation Summary
+ * US10 - Donation Confirmation
+* Velocity: 37
   * H = 7 points, M = 5 points, L = 3 points
-* Label each story of the Product Backlog with the Sprint number label
-* Create a new tab in the Product Backlog spreadsheet with the US and the tasks
+* [Product Backlog - Sprint 1](https://docs.google.com/spreadsheets/d/1mZyLCKUbVGbjoeYFcOHvxQBhpQpaeleSNZBySZJPy2Q/edit#gid=1056044682)
 
 ## Tasks
 
