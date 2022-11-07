@@ -20,15 +20,15 @@
 
 1.	What did I accomplish since the last Scrum?  
     **Leanna** - Updated SprintPlanning.md, Updated ReadMe.md (links), Updated Scrum from last meeting, Created GitHub project/Kanban, Cloned the repo and made my branch. Started my first tasks: US8 - Task 5.1 and 5.2  
-    **CJ** - Completed Sprint 1 tab in Product Backlog with US and tasks for Sprint 1.
+   **CJ** - Updated Scrum for this meeting, Created Android Studio project, Pushed to repo and make branch, commit. Created a framework, started tasks and implementing the US. 
     
 2.	What will I do until the next Scrum?  
     **Leanna** - Update Scrum for this meeting, work on and complete US8 and the connection between the activities Donation Form, Summary, and Confirmation.  
-    **CJ** - Update Scrum for this meeting, Create Android Studio project, Push to repo and make branch, commit. Create a framework, start tasks and implementing the US. May have to purchase google maps API key. 
+    **CJ** -  
     
 3.	What obstacles are impeding my progress?  
     **Leanna** - I need to continue learning/refreshing on using Android Studio for the specific tasks/features we want.  
-    **CJ** - I need to refresh my mind and become more comfortable with Android studio.
+    **CJ** - I need to refresh my mind and become more comfortable with Android studio. Also, need to learn which google maps API will be required for our application and if the key will be free or must be purchased.
 
 
 
