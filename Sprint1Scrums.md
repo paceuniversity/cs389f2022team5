@@ -16,7 +16,25 @@
 
 
 
-## Scrum Meeting 2 ():
+## Scrum Meeting 2 (11/7/22):
+
+1.	What did I accomplish since the last Scrum?  
+    **Leanna** - Updated SprintPlanning.md, Updated ReadMe.md (links), Updated Scrum from last meeting, Created GitHub project/Kanban, Cloned the repo and made my branch. Started my first tasks: US8 - Task 5.1 and 5.2  
+    **CJ** - Completed Sprint 1 tab in Product Backlog with US and tasks for Sprint 1.
+    
+2.	What will I do until the next Scrum?  
+    **Leanna** - Update Scrum for this meeting, work on and complete US8 and the connection between the activities Donation Form, Summary, and Confirmation.  
+    **CJ** - Update Scrum for this meeting, Create Android Studio project, Push to repo and make branch, commit. Create a framework, start tasks and implementing the US. May have to purchase google maps API key. 
+    
+3.	What obstacles are impeding my progress?  
+    **Leanna** - I need to continue learning/refreshing on using Android Studio for the specific tasks/features we want.  
+    **CJ** - I need to refresh my mind and become more comfortable with Android studio.
+
+
+
+
+
+
 
 1.	What did I accomplish yesterday?
 2.	What will I do today?
