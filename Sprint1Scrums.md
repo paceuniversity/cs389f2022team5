@@ -24,7 +24,7 @@
     
 2.	What will I do until the next Scrum?  
     **Leanna** - Update Scrum for this meeting, work on and complete US8 and the connection between the activities Donation Form, Summary, and Confirmation.  
-    **CJ** -  
+    **CJ** -  Research Location Services implementation in Android Studios and begin to work on US3 and the associated tasks.
     
 3.	What obstacles are impeding my progress?  
     **Leanna** - I need to continue learning/refreshing on using Android Studio for the specific tasks/features we want.  
