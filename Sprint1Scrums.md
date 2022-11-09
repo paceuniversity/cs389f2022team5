@@ -36,12 +36,12 @@
 
 1.	What did I accomplish since the last Scrum?  
     **Leanna** - Worked on US8 and the connection between the activities Donation Form, Summary, and Confirmation. Did more research on the APIs and using Android Studio for my tasks.  
-   **CJ** -  
+   **CJ** -  Learned more information about implementing current location and forms in Android Studios, began to understand more about creating the foundation for the app.
     
 2.	What will I do until the next Scrum?  
     **Leanna** - Continue working on the USs and complete by Monday (end of Sprint 1). Do more research on APIs and Firebase.  
-    **CJ** -  
+    **CJ** -  Begin to write java code for classes/objects that will be employed in the application. 
     
 3.	What obstacles are impeding my progress?  
     **Leanna** - Along with time being a limiting factor, I need to continue learning/refreshing on using Android Studio for the specific tasks/features we want.  
-    **CJ** - 
+    **CJ** - Time is the biggest obstacle at this point and not being comfortable enough with Android Studios. 
