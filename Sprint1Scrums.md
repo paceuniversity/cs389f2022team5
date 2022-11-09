@@ -39,7 +39,7 @@
    **CJ** -  
     
 2.	What will I do until the next Scrum?  
-    **Leanna** - Continue working on the USs and complete by Monday (end of Sprint 1).
+    **Leanna** - Continue working on the USs and complete by Monday (end of Sprint 1). Do more research on APIs and Firebase.  
     **CJ** -  
     
 3.	What obstacles are impeding my progress?  
