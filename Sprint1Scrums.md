@@ -32,16 +32,16 @@
 
 
 
-## Scrum Meeting 3 ():
+## Scrum Meeting 3 (11/9/22):
 
 1.	What did I accomplish since the last Scrum?  
-    **Leanna** -  
+    **Leanna** - Worked on US8 and the connection between the activities Donation Form, Summary, and Confirmation. Did more research on the APIs and using Android Studio for my tasks.  
    **CJ** -  
     
 2.	What will I do until the next Scrum?  
-    **Leanna** -  
+    **Leanna** - Continue working on the USs and complete by Monday (end of Sprint 1).
     **CJ** -  
     
 3.	What obstacles are impeding my progress?  
-    **Leanna** -  
+    **Leanna** - Along with time being a limiting factor, I need to continue learning/refreshing on using Android Studio for the specific tasks/features we want.  
     **CJ** - 
