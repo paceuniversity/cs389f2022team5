@@ -34,5 +34,5 @@
     *	(in terms of process, communications …)
 
 *	Status of the evolution of the Product Backlog (Did the backlog change????)
-*	Burndown chart for the sprint
+*	[Burndown Chart](https://github.com/orgs/paceuniversity/projects/7)
 *	Statistics from GitHub (GitHub insights)
