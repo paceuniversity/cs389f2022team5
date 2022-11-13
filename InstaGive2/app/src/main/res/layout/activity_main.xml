@@ -142,7 +142,7 @@
         android:id="@+id/donationFormButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#0D3B66"
+        android:backgroundTint="@color/Blue"
         android:text="@string/donateButtonText"
         android:onClick="launchDonationForm"
         app:layout_constraintBottom_toBottomOf="parent"
