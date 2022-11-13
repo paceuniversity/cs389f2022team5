@@ -3,4 +3,22 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="donation_form">Donation Form</string>
+    <string name="text_titleFormDescription">Please fill in the information about the item(s) you are donating.</string>
+    <string name="inputItemsName">Name of Item(s)</string>
+    <string name="quantity">Quantity</string>
+    <string name="pickup_address">Pickup Address</string>
+    <string name="inputPhone_number">Phone Number</string>
+    <string name="inputDate">Date</string>
+    <string name="submit_formButtonText">Submit Form</string>
+    <string name="apparel">Apparel</string>
+    <string name="CategoryTwo">Toys for Children</string>
+    <string name="categoryThree">Toiletries</string>
+    <string name="categoryFour">Animal Supplies</string>
+    <string name="categoryFive">School Supplies</string>
+    <string name="categorySix">Tech Supplies</string>
+    <string name="categorySeven">Other</string>
+    <string name="notes">Notes (Optional)</string>
+    <string name="textCategory">Category:</string>
+    <string name="donateButtonText">Donate</string>
 </resources>
