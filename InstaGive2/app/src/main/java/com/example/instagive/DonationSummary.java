@@ -2,6 +2,7 @@ package com.example.instagive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +15,12 @@ import android.widget.EditText;
 public class DonationSummary extends AppCompatActivity {
    // RadioGroup radioGroup;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_summary);
+
         Intent intent = getIntent();
         String user_name = intent.getStringExtra("Name");
        String quantity = intent.getStringExtra("Quantity");
@@ -64,6 +67,7 @@ public class DonationSummary extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView3);
         textView.setText("Hello");
 */
+
 
     }
 }

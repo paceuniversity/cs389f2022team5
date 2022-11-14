@@ -13,7 +13,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.BreakIterator;
 
 public class DonationForm extends AppCompatActivity {
 
@@ -34,7 +33,6 @@ public class DonationForm extends AppCompatActivity {
 
         EditText itemNameEditText = (EditText) findViewById(R.id.inputNameOfItem);
         String itemName = itemNameEditText.getText().toString(); //This it variable with users input - item name
-
 
         EditText quantityEditText = (EditText) findViewById(R.id.inputQuantity);
         String quantity = quantityEditText.getText().toString();
@@ -88,11 +86,36 @@ public class DonationForm extends AppCompatActivity {
     }
 
    /* public void launchFormSummary(View view) {
+
+       Log.d(LOG_TAG, "Form submittion button clicked!");
+        EditText quantityEditText = (EditText) findViewById(R.id.inputQuantity);
+        String quantity = quantityEditText.getText().toString();
+
+        EditText addressEditText = (EditText) findViewById(R.id.inputFormPickupAddress);
+        String pickupAddress = addressEditText.getText().toString();
+
+        EditText phoneNumEditText = (EditText) findViewById(R.id.inputFormPhoneNum);
+        String phoneNum = phoneNumEditText.getText().toString();
+
+        EditText dateEditText = (EditText) findViewById(R.id.inputFormDate);
+        String date = dateEditText.getText().toString();
+
+        EditText noteEditText = (EditText) findViewById(R.id.inputMultiLineNotes);
+        String note = noteEditText.getText().toString();
+
+        Button submitFormButton = findViewById(R.id.buttonSubmitForm);
+
+    }
+
+    public void launchFormSummary(View view) {
+
         Log.d(LOG_TAG, "Form submittion button clicked!");
 
         Intent intent = new Intent(this,DonationSummary.class);
         startActivity(intent);
+
     } */
+
 
     public void checkCategoryButton(View v) { //variable for which category is selected
         int radioId = radioGroup.getCheckedRadioButtonId();
