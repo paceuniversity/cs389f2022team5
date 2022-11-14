@@ -26,4 +26,5 @@
     <string name="destination_selection"> Destination Search</string>
     <string name="pick_Up">Pick Up Address</string>
     <string name="current_loc"> Current Location</string>
+
 </resources>
