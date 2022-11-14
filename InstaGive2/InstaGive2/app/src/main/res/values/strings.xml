@@ -21,4 +21,10 @@
     <string name="notes">Notes (Optional)</string>
     <string name="textCategory">Category:</string>
     <string name="donateButtonText">Donate</string>
+    <string name="donationSummary">Summary</string>
+    <string name="choose_destination"> Choose Destination</string>
+    <string name="destination_selection"> Destination Search</string>
+    <string name="pick_Up">Pick Up Address</string>
+    <string name="current_loc"> Current Location</string>
+
 </resources>
