@@ -14,8 +14,10 @@
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -35,54 +37,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/donationSummary"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view"/>
-
-    <TextView
-        android:id="@+id/thankyou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:text="@string/destination_selection"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#0D3B66"
-        android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_view" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#0D3B66"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view" />
-
-    <Button
-        android:id="@+id/destinationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0D3B66"
-        android:onClick="launchFormSummary"
-        android:text="@string/choose_destination"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/textEditTitle">
 
-    tools:context=".DonationSummary">
+        <RadioButton
+            android:id="@+id/radioButtonCurrent"
+            android:layout_width="152dp"
+            android:layout_height="33dp"
+            android:onClick="checkCategoryButton"
+            android:text="@string/pick_Up"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="323dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPickUp"
+            android:layout_width="152dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="0dp"
+            android:onClick="checkCategoryButton"
+            android:text="@string/current_loc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
