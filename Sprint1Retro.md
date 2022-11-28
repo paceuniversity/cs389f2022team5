@@ -33,6 +33,8 @@
 
 *	[Product Backlog](https://docs.google.com/spreadsheets/d/1mZyLCKUbVGbjoeYFcOHvxQBhpQpaeleSNZBySZJPy2Q/edit?usp=sharing)
     *	Only changed the Sprint for the USs that were not implemented in Sprint 1.
-*	[Burndown Chart](https://github.com/orgs/paceuniversity/projects/7)  
-![Burndown Chart](BurndownChart_Sprint1.png)
+*	[Burndown Chart](https://docs.google.com/spreadsheets/d/1BHfbSvmevCo5q45GMup5iqZxVN3VJ4yxqTTAV3QHPEo/edit?usp=sharing)  
+![Burndown Chart](burndownChart_Sprint1.PNG)
+*	[ToDo Progress](https://github.com/orgs/paceuniversity/projects/7)  
+![ToDo Progress](BurndownChart_Sprint1.png)
 *	[Statistics - GitHub Insights](https://github.com/paceuniversity/cs389f2022team5/pulse)
