@@ -23,28 +23,36 @@ public class DonationSummary extends AppCompatActivity {
 
         Intent intent = getIntent();
         String user_name = intent.getStringExtra("Name");
+        String item_name = intent.getStringExtra("Item_Name");
        String quantity = intent.getStringExtra("Quantity");
         String address = intent.getStringExtra("Address");
         String cell = intent.getStringExtra("Phone Number");
        String date = intent.getStringExtra("Date");
         String note = intent.getStringExtra("Notes");
         String category = intent.getStringExtra("Category");
+        String pickUP = intent.getStringExtra("Pick Up");
+        String organization = intent.getStringExtra("Organization");
        TextView result = findViewById(R.id.result);
-       result.setText("Name: " +user_name+"\nCategory: "+category+"\nQuantity: "+quantity+"\nAddress: "+address+"\nPhone Number: "+cell+"\nDate: "+date+"\nNotes: "+note);
+       result.setText("Name: " +user_name+"\nItem Name: "+item_name+"\nCategory: "+category+"\nQuantity: "+quantity+"\nAddress: "+pickUP+"\nPhone Number: "+cell+"\nDate: "+date+"\nNotes: "+note+"\nDestination: "+organization);
 
         Button submitFormButton = findViewById(R.id.destinationButton);
 
         submitFormButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view){
+            {
+                @Override
+                public void onClick(View view){
 
-                Intent intent = new Intent(DonationSummary.this,Destination.class);
-                String pickup = address;
-                intent.putExtra("Pick Up", pickup);
+                Intent intent = new Intent(DonationSummary.this,Confirmation.class);
+                Bundle mBundle = new Bundle();
+                mBundle = getIntent().getExtras();
+                intent.putExtras(mBundle);
+                //String pickup = address;
+                //intent.putExtra("Pick Up", pickup);
                 startActivity(intent);
             }
         });
+
+
 
        /* TextView nameView = findViewById(R.id.NameForm);
         nameView.setText(user_name);

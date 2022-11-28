@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private static final String LOG_TAG = DonationForm.class.getSimpleName();
-
+    private String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +37,18 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        String name = nameEditText.getText().toString();
     }
 
     public void launchDonationForm(View view) {
         Log.d(LOG_TAG, "Donate button clicked!"); //Just for the Log
 
         Intent intent = new Intent(this,DonationForm.class);
+        EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        String name = nameEditText.getText().toString();
+        intent.putExtra("Name", name);
         startActivity(intent);
     }
 

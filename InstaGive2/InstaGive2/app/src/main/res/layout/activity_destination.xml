@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".DonationForm">
 
-    <fragment
-        android:id="@+id/nav_host_fragment_activity_main2"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:navGraph="@navigation/mobile_navigation" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="411dp"
@@ -45,6 +31,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_view" />
 
+    <TextView
+        android:id="@+id/textOrganization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/organization_selection"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#0D3B66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/buttonSubmitForm"
+        android:layout_width="209dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#0D3B66"
+        android:text="Confirm Selection"
+        android:onClick="launchFormSummary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_organizations" />
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="165dp"
@@ -52,10 +62,10 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEditTitle">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <RadioButton
-            android:id="@+id/radioButtonCurrent"
+            android:id="@+id/radioButtonPickUp"
             android:layout_width="152dp"
             android:layout_height="33dp"
             android:onClick="checkCategoryButton"
@@ -64,7 +74,7 @@
             tools:layout_editor_absoluteY="323dp" />
 
         <RadioButton
-            android:id="@+id/radioButtonPickUp"
+            android:id="@+id/radioButtonCurrent"
             android:layout_width="152dp"
             android:layout_height="33dp"
             android:layout_marginTop="0dp"
@@ -75,6 +85,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_organizations"
+        android:layout_width="283dp"
+        android:layout_height="83dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOrganization" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Pick Up Address"
+        android:textColor="#0D3B66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEditTitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
