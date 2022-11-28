@@ -22,9 +22,30 @@
     <string name="textCategory">Category:</string>
     <string name="donateButtonText">Donate</string>
     <string name="donationSummary">Summary</string>
-    <string name="choose_destination"> Choose Destination</string>
-    <string name="destination_selection"> Destination Search</string>
+    <string name="choose_destination"> Choose Destination </string>
+    <string name="destination_selection"> Destination Selection </string>
+    <string name="organization_selection"> Organization Selection </string>
     <string name="pick_Up">Pick Up Address</string>
     <string name="current_loc"> Current Location</string>
+    <string name="red_cross"> American Red Cross </string>
+    <string name="aspca"> ASPCA </string>
+    <string name="boys_girls"> Boys and Girls Clubs of America </string>
+    <string name="ymca"> YMCA of the USA </string>
+    <string name="salvation_army"> Salvation Army </string>
+    <string name="feeding_usa"> Feeding America </string>
+    <string name="organization">Submit Donation</string>
+    <string-array name="organizations">
+        <item> Select Organization </item>
+        <item>American Red Cross</item>
+        <item>Salvation Army</item>
+        <item>Feeding America</item>
+        <item>YMCA of the USA</item>
+        <item>Boys and Girls Club of America</item>
+        <item>Ronald McDonald House Charities</item>
+        <item>ASPCA</item>
+        <item>Local Shelter</item>
+        <item>Local Animal Shelter</item>
+        <item>Local Soup Kitchen</item>
+    </string-array>
 
 </resources>
