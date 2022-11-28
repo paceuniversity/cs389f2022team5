@@ -19,15 +19,15 @@
 ## Scrum Meeting 2 (11/21/22):
 
 1.	What did I accomplish since the last Scrum?  
-    **Leanna** - Edit documents on GitHub and start research on organizations.
+    **Leanna** - Edit documents on GitHub and start research on organizations.  
    **CJ** - Research intents, bundles,image, spinner implementation
     
 2.	What will I do until the next Scrum?  
-    **Leanna** - Edit features such as the back arrow and menu button.
+    **Leanna** - Edit features such as the back arrow and menu button.  
     **CJ** -  Work on the coding portion of the project 
     
 3.	What obstacles are impeding my progress?  
-    **Leanna** - I was sick for a period of time and was not able to complete much of the work I planned.
+    **Leanna** - I was sick for a period of time and was not able to complete much of the work I planned.  
     **CJ** - Unexpected external circumstances and time.
 
 
@@ -35,13 +35,13 @@
 ## Scrum Meeting 3 (11/28/22):
 
 1.	What did I accomplish since the last Scrum?  
-    **Leanna** - Fixed the back arrow button to go to previous activities and researched on adding the 3 dot menu.
-   **CJ** -  Updated homepage and destination, changed order of activities, added confirmation activity and logo in the app. 
+    **Leanna** - Fixed the back arrow button to go to previous activities and researched on adding the 3 dot menu.  
+    **CJ** -  Updated homepage and destination, changed order of activities, added confirmation activity and logo in the app. 
     
 2.	What will I do until the next Scrum?  
-    **Leanna** - Implement the 3 dot menu and add more conditions to the form, such as required input.
+    **Leanna** - Implement the 3 dot menu and add more conditions to the form, such as required input.  
     **CJ** -  I will work on the about page and adding information on each organization we provide deilveries to. 
     
 3.	What obstacles are impeding my progress?  
-    **Leanna** - Time is a major factor in completing the project. Also, a lot of research must be done for organizations and implementing what we want.
+    **Leanna** - Time is a major factor in completing the project. Also, a lot of research must be done for organizations and implementing what we want.  
     **CJ** - Time and having to find efficient resources to learn new implementation in Android Studio.
