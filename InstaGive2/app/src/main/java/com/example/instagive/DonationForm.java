@@ -83,6 +83,7 @@ public class DonationForm extends AppCompatActivity {
                 form.putString("Date", date);
                 form.putString("Category", category);
 
+
                 if (TextUtils.isEmpty(itemName)) { //making fields required. Checking if empty
                     itemNameEditText.setError("Item name is required!");
                 } else if (TextUtils.isEmpty(items)) {
