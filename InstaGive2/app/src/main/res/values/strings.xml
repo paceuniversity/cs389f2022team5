@@ -34,6 +34,14 @@
     <string name="salvation_army"> Salvation Army </string>
     <string name="feeding_usa"> Feeding America </string>
     <string name="organization">Submit Donation</string>
+    <string name="LearnMore_ButtonText">Learn More</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="missionStatementText">Our goal is to provide a convenient way to support others who are in need. Having an easy way to know what to do with one’s unused items can raise the likelihood of more people donating and ultimately, help others and create less waste.
+\n\n
+We wanted the ability to donate items to be easier since people would find it more convenient to throw away items they don’t use than trying to figure out the locations and find time to donate them. A delivery app that picks up and drops off donation items at their respective locations (e.g. shelters or organizations) would help increase the likelihood of people donating since it’s more convenient. This targets responsible consumption and production.
+\n\n
+Our target users are those who have items they don’t use anymore/often that they would otherwise throw away. Our app combines the delivery system from most food delivery apps with the ability to donate. It is an easy way to reduce waste and help organizations and people in need.</string>
+
     <string-array name="organizations">
         <item> Select Organization </item>
         <item>American Red Cross</item>

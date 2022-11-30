@@ -13,15 +13,25 @@
         android:theme="@style/Theme.InstaGive"
         tools:targetApi="31">
         <activity
+            android:name=".MissionStatement"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Confirmation"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".DonationSummary">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Destination"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".DonationForm">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -30,7 +40,7 @@
             android:name=".DonationSummary"
             android:exported="false"
             android:label="Donation Summary"
-            android:parentActivityName=".DonationForm">
+            android:parentActivityName=".Destination">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -61,7 +62,7 @@ public class DonationForm extends AppCompatActivity {
         submitFormButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 String itemName = itemNameEditText.getText().toString();
                 String items = quantityEditText.getText().toString();
                 String address = addressEditText.getText().toString();
@@ -75,16 +76,30 @@ public class DonationForm extends AppCompatActivity {
                 form = new Bundle();
                 form.putString("Name", name);
                 form.putString("Item_Name", itemName);
-                form.putString("Quantity" , items);
+                form.putString("Quantity", items);
                 form.putString("Notes", notes);
-                form.putString("Address" , address);
+                form.putString("Address", address);
                 form.putString("Phone Number", phone);
                 form.putString("Date", date);
                 form.putString("Category", category);
 
 
-               Intent intent = new Intent(DonationForm.this,Destination.class);
-               intent.putExtras(form);
+                if (TextUtils.isEmpty(itemName)) { //making fields required. Checking if empty
+                    itemNameEditText.setError("Item name is required!");
+                } else if (TextUtils.isEmpty(items)) {
+                    quantityEditText.setError("Quantity of the item is required!");
+                } else if (TextUtils.isEmpty(address)) {
+                    addressEditText.setError("Your pickup address is required!");
+                } else if (TextUtils.isEmpty(phone)) {
+                    phoneNumEditText.setError("Phone number is required!");
+                } else if (TextUtils.isEmpty(date)) {
+                    dateEditText.setError("Date is required!");
+                //} else if (TextUtils.isEmpty(category)) {
+                    //textViewCategory.setError("A category must be selected!");
+                }else{
+                    Intent intent = new Intent(DonationForm.this, Destination.class);
+                    intent.putExtras(form);
+
                /* intent.putExtra("Name", name);
                 intent.putExtra("Quantity", items);
                 intent.putExtra("Notes", notes);
@@ -93,7 +108,8 @@ public class DonationForm extends AppCompatActivity {
                 intent.putExtra("Date", date);
                 intent.putExtra("Category", category); */
 
-                startActivity(intent);
+                    startActivity(intent);
+                }
             }
         });
 
