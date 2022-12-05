@@ -9,7 +9,8 @@
   * US12 - Get Donation History
   * US20 - Saving sessions
   * US21 - Log out
-* Velocity: 18
+  * US24 - Learn More
+* Velocity: 21
   * H = 7 points, M = 5 points, L = 3 points
 * [Product Backlog - Sprint 3](https://docs.google.com/spreadsheets/d/1mZyLCKUbVGbjoeYFcOHvxQBhpQpaeleSNZBySZJPy2Q/edit#gid=518266361)
 
