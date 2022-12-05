@@ -35,3 +35,7 @@
 * US12 - US21 - Log out
   * Implement button to log out of the current account
   * Direct it to login screen
+* US24 - Learn More
+  * Write Brief Statement On Each Organization listed
+  * Implement If condition to match selected organization
+  * Add links to each supported organization 
