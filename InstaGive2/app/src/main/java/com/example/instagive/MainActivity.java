@@ -3,6 +3,8 @@ package com.example.instagive;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         String name = nameEditText.getText().toString();
     }
 
+    public void launchMissionStatement (View view){
+
+        Intent intent = new Intent(this,MissionStatement.class);
+        EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        String name = nameEditText.getText().toString();
+        intent.putExtra("Name", name);
+        startActivity(intent);
+    }
     public void launchDonationForm(View view) {
         Log.d(LOG_TAG, "Donate button clicked!"); //Just for the Log
 
@@ -52,4 +62,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) { //creates the 3 dot menu on Main
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+
+        //return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mission:
+                Intent intent = new Intent(MainActivity.this, Contact.class);
+                //intent.putExtra(EXTRA_MESSAGE, mMessage);
+                startActivity(intent);
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
