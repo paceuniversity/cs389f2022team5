@@ -4,15 +4,15 @@
 
 1.	What did I accomplish since the last Scrum?  
     **Leanna** -  
-    **CJ** - 
+    **CJ** - Added Contact Page(along with email and socials), Added Learn More Page, Updated background color.
     
 2.	What will I do until the next Scrum?  
     **Leanna** -    
-    **CJ** -  
+    **CJ** - Research more on firebase and begin to implement firebase into our project. 
     
 3.	What obstacles are impeding my progress?  
     **Leanna** -   
-    **CJ** -  
+    **CJ** - Time management, increase workload from all classes during this period of time. 
 
 
 
