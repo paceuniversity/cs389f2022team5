@@ -37,9 +37,9 @@
 ### Sprint 2
 
 * [Sprint planning](https://github.com/paceuniversity/cs389f2022team5/blob/main/Sprint2Planning.md)
-* [Scrums]()
-* [Sprint demo video]()
-* [Sprint retrospective]()
+* [Scrums](https://github.com/paceuniversity/cs389f2022team5/blob/main/Sprint2Scrums.md)
+* [Sprint Demo](Sprint2Demo.md)
+* [Sprint Retrospective](Sprint2Retro.md)
 
 ### Sprint 3
 
