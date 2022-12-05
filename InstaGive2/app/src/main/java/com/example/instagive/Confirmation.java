@@ -43,7 +43,7 @@ public class Confirmation extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    Intent intent = new Intent(Confirmation.this, MainActivity.class);
+                    Intent intent = new Intent(Confirmation.this, Learn.class);
                     Bundle mBundle = new Bundle();
                     mBundle = getIntent().getExtras();
                     intent.putExtras(mBundle);
