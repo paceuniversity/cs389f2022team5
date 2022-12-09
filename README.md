@@ -45,8 +45,8 @@
 
 * [Sprint planning](https://github.com/paceuniversity/cs389f2022team5/blob/main/Sprint3Planning.md)
 * [Scrums](Sprint3Scrums.md)
-* [Sprint demo video]()
-* [Sprint retrospective]()
+* [Sprint Demo](Sprint3Demo.md)
+* [Sprint Retrospective](Sprint3Retro.md)
 
 ## Tools & APIs
 
