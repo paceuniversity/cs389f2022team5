@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "976193898919",
+    "project_id": "instagive-369922",
+    "storage_bucket": "instagive-369922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976193898919:android:9531bc62ac3d15b3588e82",
+        "android_client_info": {
+          "package_name": "com.example.instagive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976193898919-3f8nrfou3kktjt14hlr0169uh2pn5oah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTRHcnoyuDs6oRclmo1yh3j6X1Qz3ocOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976193898919-3f8nrfou3kktjt14hlr0169uh2pn5oah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

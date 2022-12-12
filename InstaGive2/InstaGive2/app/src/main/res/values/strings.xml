@@ -21,4 +21,63 @@
     <string name="notes">Notes (Optional)</string>
     <string name="textCategory">Category:</string>
     <string name="donateButtonText">Donate</string>
+    <string name="donationSummary">Summary</string>
+    <string name="choose_destination"> Choose Destination </string>
+    <string name="destination_selection"> Destination Selection </string>
+    <string name="organization_selection"> Organization Selection </string>
+    <string name="pick_Up">Pick Up Address</string>
+    <string name="current_loc"> Current Location</string>
+    <string name="red_cross"> American Red Cross </string>
+    <string name="aspca"> ASPCA </string>
+    <string name="boys_girls"> Boys and Girls Clubs of America </string>
+    <string name="ymca"> YMCA of the USA </string>
+    <string name="salvation_army"> Salvation Army </string>
+    <string name="feeding_usa"> Feeding America </string>
+    <string name="organization">Submit Donation</string>
+    <string name="LearnMore_ButtonText">Learn More</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="contact">Contact</string>
+    <string name="missionStatementText">Our goal is to provide a convenient way to support others who are in need. Having an easy way to know what to do with one’s unused items can raise the likelihood of more people donating and ultimately, help others and create less waste.
+\n\n
+We wanted the ability to donate items to be easier since people would find it more convenient to throw away items they don’t use than trying to figure out the locations and find time to donate them. A delivery app that picks up and drops off donation items at their respective locations (e.g. shelters or organizations) would help increase the likelihood of people donating since it’s more convenient. This targets responsible consumption and production.
+\n\n
+Our target users are those who have items they don’t use anymore/often that they would otherwise throw away. Our app combines the delivery system from most food delivery apps with the ability to donate. It is an easy way to reduce waste and help organizations and people in need.</string>
+    <string name="contactInfo"> \nEmail: instagive2022@gmail.com\n \nPhone: 1-800-instagive\n \nMailing Address: One Pace Plaza New York, NY 10083\n \nSocials: @instaglve</string>
+
+    <string-array name="organizations">
+        <item> Select Organization </item>
+        <item>American Red Cross</item>
+        <item>Salvation Army</item>
+        <item>Feeding America</item>
+        <item>YMCA of the USA</item>
+        <item>Boys and Girls Club of America</item>
+        <item>Ronald McDonald House Charities</item>
+        <item>ASPCA</item>
+        <item>Local Shelter</item>
+        <item>Local Animal Shelter</item>
+        <item>Local Soup Kitchen</item>
+    </string-array>
+
+    <string-array name="pickupTime">
+        <item> Time </item>
+        <item>10:00 AM</item>
+        <item>10:30 AM</item>
+        <item>11:00 AM</item>
+        <item>11:30 AM</item>
+        <item>12:00 PM</item>
+        <item>12:30 PM</item>
+        <item>1:00 PM</item>
+        <item>1:30 PM</item>
+        <item>2:00 PM</item>
+        <item>2:30 PM</item>
+        <item>3:00 PM</item>
+        <item>3:30 PM</item>
+        <item>4:00 PM</item>
+        <item>4:30 PM</item>
+        <item>5:00 PM</item>
+        <item>5:30 PM</item>
+        <item>6:00 PM</item>
+    </string-array>
+
+
 </resources>

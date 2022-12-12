@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Light_Yellow"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Register">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:textColor="@color/Blue"
+    android:textSize="18sp"
+    android:fontFamily="sans-serif-condensed"
+    android:text="Register below"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+
+
+    <EditText
+        android:id="@+id/userEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+    <EditText
+        android:id="@+id/userPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="phone"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Confirm Password"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:textColorHint="@color/Blue"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/Blue"
+        android:text="Register"
+        android:textColor="@color/Light_Yellow"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ? "
+            android:textColor="@color/Blue"/>
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:text="Login Now"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
