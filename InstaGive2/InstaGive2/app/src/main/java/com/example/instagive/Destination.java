@@ -25,7 +25,7 @@ public class Destination extends AppCompatActivity {
         setContentView(R.layout.activity_destination);
         radioGroup = findViewById(R.id.radioGroup);
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Name");
+        String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("Address");
 
         Spinner spinnerOrganizations =findViewById(R.id.spinner_organizations);
