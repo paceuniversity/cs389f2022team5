@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mission:
+
                 Intent intent = new Intent(MainActivity.this, Contact.class);
+
+
                 //intent.putExtra(EXTRA_MESSAGE, mMessage);
                 startActivity(intent);
                 return true;

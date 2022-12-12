@@ -5,7 +5,9 @@
     <item
         android:id="@+id/mission"
         android:orderInCategory="10"
+
         android:title="@string/contact"
+
         app:showAsAction="never" />
     <item
         android:id="@+id/history"

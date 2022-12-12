@@ -15,6 +15,16 @@
         <activity
             android:name=".Contact"
             android:exported="false">
+
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Confirmation"
+            android:exported="false"
+            android:parentActivityName=".DonationSummary">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -22,6 +32,11 @@
         <activity
             android:name=".Learn"
             android:exported="false">
+
+            android:name=".Destination"
+            android:exported="false"
+            android:parentActivityName=".DonationForm">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

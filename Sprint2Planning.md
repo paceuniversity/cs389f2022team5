@@ -2,16 +2,30 @@
 
 ## What is your Sprint Goal?
 
-* Number of User Stories you will implement during the Sprint
-* User Stories you will implement during the Sprint
-* Velocity you will implement during the Sprint
+* Implement 3 User Stories
+* User Stories: 
+  * US3 - Current Location
+  * US5 - Get List of Organizations
+  * US7 - Description of Locations
+* Velocity: 13
   * H = 7 points, M = 5 points, L = 3 points
-* Label each story of the Product Backlog with the Sprint number label
-* Create a new tab in the Product Backlog spreadsheet with the US and the tasks
+* [Product Backlog - Sprint 2](https://docs.google.com/spreadsheets/d/1mZyLCKUbVGbjoeYFcOHvxQBhpQpaeleSNZBySZJPy2Q/edit#gid=816747650)
 
 ## Tasks
 
-*	Decompose each User Story into tasks 
-*	Assign each task to a team member
-*	Estimate the amount of time for each task
-*	Every student should plan for 16 hours of work minimum for a sprint
+* US3 - Current Location
+  * Learn how to retrieve user's current location in Android Studios 
+  * Implement current location function
+  * Implement requesting permission, to access current location, from user
+  * Design UI for user to request their current location
+* US5 - Get List of Organizations
+  * Research Charity/Donation Organizations
+  * Retrieve Users Current Location 
+  * Use google maps function to find locations 
+  * Give user ability to choose location to donate from results 
+* US7 - Description of Locations
+  * Research more on the organizations
+  * Add page where more info will be shown
+  * Have organization options be clickable and bring user to the page with more info
+  * Add text and links for the specific organization
+
