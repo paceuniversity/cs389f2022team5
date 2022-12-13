@@ -6,6 +6,7 @@ public class donationClass {
     private String address;
     private String userName;
     private String date;
+    private String item_name;
     private String time;
     private String title;
     private String notes;
@@ -14,16 +15,26 @@ public class donationClass {
 
     }
 
-    public donationClass(String name, String phone, String address, String userName, String date,String notes, String time, String title, String organization) {
+    public donationClass(String name, String phone, String address, String userName, String date, String item_name, String notes, String time, String title, String organization) {
         this.name = name;
         this.phone = phone;
         this.address = address;
         this.userName = userName;
         this.date = date;
+        this.item_name = item_name;
         this.notes = notes;
         this.time = time;
         this.title = title;
         this.organization = organization;
+
+    }
+
+    public String getItem_name() {
+        return item_name;
+    }
+
+    public void setItem_name(String item_name) {
+        this.item_name = item_name;
     }
 
     public String getOrganization() {
