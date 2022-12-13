@@ -45,7 +45,7 @@ Our target users are those who have items they don’t use anymore/often that th
     <string name="contactInfo"> \nEmail: instagive2022@gmail.com\n \nPhone: 1-800-instagive\n \nMailing Address: One Pace Plaza New York, NY 10083\n \nSocials: @instaglve</string>
 
     <string-array name="organizations">
-        <item> Select Organization </item>
+        <item>Select Organization</item>
         <item>American Red Cross</item>
         <item>Salvation Army</item>
         <item>Feeding America</item>

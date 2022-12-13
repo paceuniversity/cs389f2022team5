@@ -71,10 +71,10 @@ public class DonationSummary extends AppCompatActivity {
             {
                 @Override
                 public void onClick(View view){
-                    reference.child(nameDB).child("donations").setValue(dono+1);
+                   reference.child(nameDB).child("donations").setValue(dono+1);
                     dono = dono+1;
-                    String donoTitle = "Donation " +dono;
-                    donationClass donation = new donationClass(user_name,cell,pickUP,nameDB,note,date,time,donoTitle,organization);
+                    String donoTitle = "Donation " +dono+": "+item_name;
+                    donationClass donation = new donationClass(user_name,cell,pickUP,nameDB,date,item_name,note,time, donoTitle,organization);
                     reference.child(nameDB).child("history").child(donoTitle).setValue(donation);
                    // reference.child(nameDB).child("history").child(donoTitle).push().setValue(donation);
 
