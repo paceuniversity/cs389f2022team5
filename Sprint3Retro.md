@@ -27,7 +27,7 @@
 
 *	Summary:
     *	What should the team start doing?
-        * The team should start completing individual tasks and push individual changes more often. 
+        * The team should make sure the app is ready and prepare for the final presentation.
     *	What should the team stop doing?
         *	The team should stop overestimating the difficulty of our tasks and underestimating the time it takes to complete other backend (Firebase) tasks. 
     *	What should the team continue doing?
