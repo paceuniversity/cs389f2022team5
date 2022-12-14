@@ -52,7 +52,7 @@
 
 * [GitHub](https://github.com/)
 * [Android Studio](https://developer.android.com/studio)
-* [Discord](https://discord.com/)
+* [Discord](https://discord.gg/x29e5KAw)
 * [Firebase](https://firebase.google.com/)
 * [Google Drive](https://www.google.com/drive/)
 
