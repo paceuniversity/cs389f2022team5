@@ -10,5 +10,4 @@
 ![InstaGive Screenshot 3]()
 ![InstaGive Screenshot 4]()
 ![InstaGive Screenshot 5]()
-*	Video demo of the application (YouTube link)
 *	[APK](InstaGive.apk)
