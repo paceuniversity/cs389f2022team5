@@ -22,18 +22,19 @@ public class Confirmation extends AppCompatActivity {
             setContentView(R.layout.activity_confirmation);
 
             Intent intent = getIntent();
-            String user_name = intent.getStringExtra("Name");
+            String user_name = intent.getStringExtra("name");
             String item_name = intent.getStringExtra("Item_Name");
             String quantity = intent.getStringExtra("Quantity");
             String address = intent.getStringExtra("Address");
-            String cell = intent.getStringExtra("Phone Number");
+            String cell = intent.getStringExtra("phone");
             String date = intent.getStringExtra("Date");
             String note = intent.getStringExtra("Notes");
             String category = intent.getStringExtra("Category");
             String pickUP = intent.getStringExtra("Pick Up");
             String organization = intent.getStringExtra("Organization");
+            String time = intent.getStringExtra("Time");
             TextView result = findViewById(R.id.result);
-            result.setText("Name: " + user_name + "\nItem Name: "+item_name+"\nCategory: " + category + "\nQuantity: " + quantity + "\nAddress: " + pickUP + "\nPhone Number: " + cell + "\nDate: " + date + "\nNotes: " + note + "\nDestination: " + organization);
+            result.setText("Name: " + user_name + "\nItem Name: "+item_name+"\nCategory: " + category + "\nQuantity: " + quantity + "\nAddress: " + pickUP + "\nPhone Number: " + cell + "\nDate: " + date + "\nPickup Time: "+time+"\nNotes: " + note + "\nDestination: " + organization);
 
             TextView paragraph = findViewById(R.id.paragraph);
             paragraph.setText("Thank you " +user_name+ ", for your donation towards the " +organization+ ". You will be receiving updates, via the cell number provided, 1-2 days prior to your requested date.\nFor more information on your chosen organization, please continue below.");
