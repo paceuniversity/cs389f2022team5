@@ -44,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         String name = nameEditText.getText().toString();
     }
 
+    public void launchMissionStatement (View view){
+
+        Intent intent = new Intent(this,MissionStatement.class);
+        EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        String name = nameEditText.getText().toString();
+        intent.putExtra("Name", name);
+        startActivity(intent);
+    }
     public void launchDonationForm(View view) {
         Log.d(LOG_TAG, "Donate button clicked!"); //Just for the Log
 
@@ -66,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mission:
-                Intent intent = new Intent(MainActivity.this, MissionStatement.class);
+
+                Intent intent = new Intent(MainActivity.this, Contact.class);
+
+
                 //intent.putExtra(EXTRA_MESSAGE, mMessage);
                 startActivity(intent);
                 return true;

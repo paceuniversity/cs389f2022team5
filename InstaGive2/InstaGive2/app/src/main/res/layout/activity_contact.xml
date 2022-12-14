@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/yellow_background"
+    tools:context=".EditProfile">
+
+
+    <LinearLayout
+        android:layout_width="396dp"
+        android:layout_height="695dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:textAlignment="center"
+            android:textColor="@color/Blue"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Phone: 1-800-InstaGive"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue" />
+
+        <TextView
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Email: instagive2022@gmail.com"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue" />
+
+        <TextView
+            android:id="@+id/editInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Instagram: @instaglve"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue" />
+
+        <TextView
+            android:id="@+id/editFB"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Facebook: Insta Give"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue" />
+
+        <TextView
+            android:id="@+id/editDiscord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Discord: InstaGive"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/Blue"
+            android:text="Submit A Request"
+            android:textColor="@color/Light_Yellow"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/instagive" />
+    </LinearLayout>
+
+</LinearLayout>
