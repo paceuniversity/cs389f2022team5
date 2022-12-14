@@ -1,7 +1,7 @@
 ## Retrospective - Sprint 3
 
 * Sprint Goal:
-  *	Implement 3 User Stories
+  *	Implement 4 User Stories
   *	User Stories: 
     * US3 - Current Location
     * US5 - Get List of Organizations
