@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "976193898919",
+    "firebase_url": "https://instagive-369922-default-rtdb.firebaseio.com",
+    "project_id": "instagive-369922",
+    "storage_bucket": "instagive-369922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976193898919:android:ded83a5d547e0c2f588e82",
+        "android_client_info": {
+          "package_name": "com.example.instagive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976193898919-8k6scrdvg89m5o1nk959j7in45qltk3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instagive",
+            "certificate_hash": "1188ecb1b485d315f043a865e1e9218f6071f381"
+          }
+        },
+        {
+          "client_id": "976193898919-3f8nrfou3kktjt14hlr0169uh2pn5oah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTRHcnoyuDs6oRclmo1yh3j6X1Qz3ocOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976193898919-3f8nrfou3kktjt14hlr0169uh2pn5oah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

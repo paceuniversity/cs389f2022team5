@@ -25,7 +25,7 @@ public class Destination extends AppCompatActivity {
         setContentView(R.layout.activity_destination);
         radioGroup = findViewById(R.id.radioGroup);
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Name");
+        String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("Address");
 
         Spinner spinnerOrganizations =findViewById(R.id.spinner_organizations);
@@ -49,13 +49,19 @@ public class Destination extends AppCompatActivity {
                 radioButton = findViewById(radioId);
                 String pickUP = radioButton.getText().toString();
                 String organization = spinnerOrganizations.getSelectedItem().toString();
+                if(organization.equals("Select Organization"))
+                {
+                    Toast.makeText(Destination.this, "Please select an organization!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
                 Intent intent = new Intent(Destination.this,DonationSummary.class);
                 Bundle form = new Bundle();
                 form = getIntent().getExtras();
                 form.putString("Pick Up", pickUP);
                 form.putString("Organization" , organization);
                 intent.putExtras(form);
-                startActivity(intent);
+                startActivity(intent); }
             }
         });
 

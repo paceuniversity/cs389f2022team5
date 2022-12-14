@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonationForm"
-    android:background="@color/Light_Yellow">
+    tools:context=".DonationForm">
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main2"
@@ -24,7 +23,7 @@
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
-        app:itemTextColor="@color/Blue"
+        app:itemTextColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +37,6 @@
         android:layout_marginTop="52dp"
         android:text="@string/donation_form"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/Blue"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +48,6 @@
         android:layout_height="35dp"
         android:text="@string/text_titleFormDescription"
         android:textAlignment="center"
-        android:textColor="@color/Blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFormTitle" />
@@ -131,7 +127,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="@string/textCategory"
-        android:textColor="@color/Blue"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFormDescription" />
@@ -152,7 +147,6 @@
             android:layout_height="33dp"
             android:onClick="checkCategoryButton"
             android:text="@string/apparel"
-            android:textColor="@color/Blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -163,7 +157,6 @@
             android:layout_height="33dp"
             android:onClick="checkCategoryButton"
             android:text="@string/CategoryTwo"
-            android:textColor="@color/Blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.655"
             app:layout_constraintStart_toStartOf="parent"
@@ -175,7 +168,6 @@
             android:layout_height="33dp"
             android:onClick="checkCategoryButton"
             android:text="@string/categoryThree"
-            android:textColor="@color/Blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.949"
             app:layout_constraintStart_toStartOf="parent"
@@ -187,9 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
-            android:text="@string/categoryFour"
-            android:textColor="@color/Blue" />
-
+            android:text="@string/categoryFour" />
 
         <RadioButton
             android:id="@+id/radioButtonSchool"
@@ -197,9 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
-            android:text="@string/categoryFive"
-            android:textColor="@color/Blue" />
-
+            android:text="@string/categoryFive" />
 
         <RadioButton
             android:id="@+id/radioButtonTech"
@@ -207,9 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
-            android:text="@string/categorySix"
-            android:textColor="@color/Blue" />
-
+            android:text="@string/categorySix" />
 
         <RadioButton
             android:id="@+id/radioButtonOther"
@@ -217,9 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
-            android:text="@string/categorySeven"
-            android:textColor="@color/Blue" />
-
+            android:text="@string/categorySeven" />
     </RadioGroup>
 
     <EditText
@@ -233,18 +217,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/inputQuantity" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="208dp"
-        android:layout_height="36dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSubmitForm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputFormDate"
-        app:layout_constraintVertical_bias="0.257" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

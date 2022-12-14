@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/mission"
+        android:id="@+id/contact"
         android:orderInCategory="10"
-
         android:title="@string/contact"
-
         app:showAsAction="never" />
     <item
         android:id="@+id/history"
@@ -15,9 +13,9 @@
         android:title="History"
         app:showAsAction="never" />
     <item
-        android:id="@+id/settings"
+        android:id="@+id/editProfile"
         android:orderInCategory="100"
-        android:title="Settings"
+        android:title="Account"
         app:showAsAction="never" />
 
 
