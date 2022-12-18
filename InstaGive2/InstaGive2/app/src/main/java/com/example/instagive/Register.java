@@ -14,8 +14,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /*import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -66,35 +69,60 @@ public class Register extends AppCompatActivity {
         confirmText = findViewById(R.id.confirmPassword);
         registerButton = findViewById(R.id.register_button);
         loginNow = findViewById(R.id.login);
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users");
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        usernameText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               String fullName = nameText.getText().toString();
-               String phone = phoneText.getText().toString();
-               String email = emailText.getText().toString();
-               String username = usernameText.getText().toString();
-               String password = passwordText.getText().toString();
-               String confirmPass = confirmText.getText().toString();
+                Toast.makeText(Register.this,"Username may not be changed after registration",Toast.LENGTH_SHORT);
+            }
+        });
 
-                if(fullName.isEmpty() || phone.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPass.isEmpty())
-                {
-                    Toast.makeText(Register.this,"Please fill all fields", Toast.LENGTH_SHORT).show();
-                }
+        registerButton.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  String fullName = nameText.getText().toString();
+                                                  String phone = phoneText.getText().toString();
+                                                  String email = emailText.getText().toString();
+                                                  String username = usernameText.getText().toString().trim();
+                                                  String password = passwordText.getText().toString();
+                                                  String confirmPass = confirmText.getText().toString();
 
-                else if(!password.equals(confirmPass))
-                {
-                    Toast.makeText(Register.this,"Passwords do not match", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                database = FirebaseDatabase.getInstance();
-                reference = database.getReference("users");
-                userClass newUser = new userClass(fullName,email,phone,username,password);
-                reference.child(username).setValue(newUser);
+                                                  if (fullName.isEmpty() || phone.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPass.isEmpty()) {
+                                                      Toast.makeText(Register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                                                  } else if (!password.equals(confirmPass)) {
+                                                      Toast.makeText(Register.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                                                  } else {
+                                                      reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                          @Override
+                                                          public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                              if (snapshot.hasChild(username)) {
+                                                                  Toast.makeText(Register.this, "This username is already taken.", Toast.LENGTH_SHORT).show();
+                                                              }
+                                                              else {
+                                                                  userClass newUser = new userClass(fullName, email, phone, username, password);
+                                                                  reference.child(username).setValue(newUser);
 
-                Toast.makeText(Register.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Register.this, Login.class);
-                startActivity(intent); }
+                                                                  Toast.makeText(Register.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
+                                                                  Intent intent = new Intent(Register.this, Login.class);
+                                                                  startActivity(intent);
+                                                              }
+                                                          } //end of onDataChange
+
+                                                          @Override
+                                                          public void onCancelled(@NonNull DatabaseError error) {
+
+                                                          }
+                                                      });
+
+
+                                                      // userClass newUser = new userClass(fullName,email,phone,username,password);
+                                                      // reference.child(username).setValue(newUser);
+
+                                                      // Toast.makeText(Register.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
+                                                      // Intent intent = new Intent(Register.this, Login.class);
+                                                      // startActivity(intent); }
              /*  if(fullName.isEmpty() || phone.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPass.isEmpty())
                {
                    Toast.makeText(Register.this,"Please fill all fields", Toast.LENGTH_SHORT).show();
@@ -158,8 +186,10 @@ public class Register extends AppCompatActivity {
                    finish();
                } */ //end of else
 
-            } //end of onClick
-        }); //end of setOnClickListener for register button
+                                                  } //end of else
+
+                                              }//end of onCLick
+        });//end of setOnClickListener for register button
 
         loginNow.setOnClickListener(new View.OnClickListener() {
             @Override

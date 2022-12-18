@@ -22,13 +22,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit Profile"
+                android:text="Manage Account"
                 android:textAlignment="center"
                 android:textColor="@color/Blue"
                 android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-medium"/>
 
             <EditText
+                android:fontFamily="sans-serif-condensed-medium"
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -38,7 +40,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Name"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/Blue" />
 
             <EditText
                 android:id="@+id/editEmail"
@@ -50,7 +52,8 @@
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/Blue"
+                android:fontFamily="sans-serif-condensed-medium"/>
 
             <EditText
                 android:id="@+id/editPhone"
@@ -62,19 +65,23 @@
                 android:drawablePadding="8dp"
                 android:hint="Phone"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/Blue"
+                android:fontFamily="sans-serif-condensed-medium"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/editUsername"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/blue_border"
-                android:drawableLeft="@drawable/yellow_background"
                 android:drawablePadding="8dp"
-                android:hint="Username"
-                android:padding="8dp"
-                android:textColor="@color/black" />
+                android:drawableLeft="@drawable/yellow_background"
+                android:text="Username"
+                android:textSize="24dp"
+                android:textStyle="bold"
+               android:padding="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"/>
 
             <EditText
                 android:id="@+id/editPassword"
@@ -87,7 +94,8 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/Blue"
+                android:fontFamily="sans-serif-condensed-medium"/>
 
             <Button
                 android:id="@+id/saveButton"
@@ -98,7 +106,20 @@
                 android:text="Save"
                 android:textColor="@color/Light_Yellow"
                 android:textSize="18sp"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <Button
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/Blue"
+                android:text="LOG OUT"
+                android:textColor="@color/Light_Yellow"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                android:fontFamily="sans-serif-condensed-medium"/>
         </LinearLayout>
 
 </LinearLayout>
