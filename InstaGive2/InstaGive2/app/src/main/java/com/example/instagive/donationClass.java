@@ -11,11 +11,13 @@ public class donationClass {
     private String title;
     private String notes;
     private String organization;
+    private int number;
+    private String hisTitle;
     public donationClass() {
 
     }
 
-    public donationClass(String name, String phone, String address, String userName, String date, String item_name, String notes, String time, String title, String organization) {
+    public donationClass(String name, String phone, String address, String userName, String date, String item_name, String notes, String time, String title, String organization,String hisTitle, int number) {
         this.name = name;
         this.phone = phone;
         this.address = address;
@@ -26,7 +28,31 @@ public class donationClass {
         this.time = time;
         this.title = title;
         this.organization = organization;
+        this.number = number;
+        this.hisTitle = hisTitle;
 
+    }
+
+    public String getHisTitle() {
+        return hisTitle;
+    }
+
+    public void setHisTitle(String hisTitle) {
+        this.hisTitle = hisTitle;
+    }
+
+    @Override
+    public String toString() {
+       String out  = title + " Date: " + date + " Time: " + time+ "Pick Up: " + address + "Destination: " + organization;
+        return out;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getItem_name() {

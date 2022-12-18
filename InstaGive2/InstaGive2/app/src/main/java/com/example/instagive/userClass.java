@@ -20,6 +20,11 @@ public class userClass {
         donations = 0;
     }
 
+    @Override
+    public String toString() {
+        return "name='" + name + ", phone='" + phone  + ", email='" + email ;
+    }
+
     public int getDonations() {
         return donations;
     }

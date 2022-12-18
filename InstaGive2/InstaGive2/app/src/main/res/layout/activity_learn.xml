@@ -22,7 +22,8 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textEditTitle">
+        android:layout_below="@id/textEditTitle"
+        android:fontFamily="sans-serif-condensed-medium">
 
         <TextView
             android:id="@+id/result"
@@ -31,7 +32,8 @@
             android:lineSpacingExtra="5sp"
             android:padding="10dp"
             android:textColor="@color/Blue"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed-medium"/>
     </ScrollView>
 
     <Button
@@ -44,7 +46,8 @@
         android:layout_marginTop="483dp"
         android:layout_marginBottom="112dp"
         android:textColor="@color/Light_Yellow"
-        tools:ignore="NotSibling,UnknownId" />
+        tools:ignore="NotSibling,UnknownId"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <Button
         android:id="@+id/returnHome"
@@ -57,6 +60,7 @@
         android:layout_marginStart="-3dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="38dp"
-        android:text="Return" />
+        android:text="Return"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
 </RelativeLayout>

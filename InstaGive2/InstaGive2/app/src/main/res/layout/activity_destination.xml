@@ -4,32 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Light_Yellow"
     tools:context=".DonationForm">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:itemTextColor="#0D3B66"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteY="68dp" />
 
     <TextView
         android:id="@+id/textEditTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:text="@string/destination_selection"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view" />
+        tools:layout_editor_absoluteY="176dp"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <TextView
         android:id="@+id/textOrganization"
@@ -40,7 +29,8 @@
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <Button
         android:id="@+id/buttonSubmitForm"
@@ -53,7 +43,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_organizations" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_organizations"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -71,7 +62,8 @@
             android:onClick="checkCategoryButton"
             android:text="@string/pick_Up"
             tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="323dp" />
+            tools:layout_editor_absoluteY="323dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <RadioButton
             android:id="@+id/radioButtonCurrent"
@@ -83,7 +75,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            android:fontFamily="sans-serif-condensed-medium"/>
     </RadioGroup>
 
     <Spinner
@@ -104,7 +97,8 @@
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEditTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textEditTitle"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
