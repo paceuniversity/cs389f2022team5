@@ -7,6 +7,7 @@
     android:background="@color/Light_Yellow"
     tools:context=".History">
 
+
     <ListView
         android:id="@+id/idLVDonations"
         android:layout_width="wrap_content"

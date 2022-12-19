@@ -8,5 +8,4 @@
 ![InstaGive Screenshot 1](image1_Sprint1.png)
 ![InstaGive Screenshot 2](image2_Sprint1.png)
 ![InstaGive Screenshot 3](image3_Sprint1.png)
-*	Video demo of the application (YouTube link)
 *	[APK](InstaGive.apk)
