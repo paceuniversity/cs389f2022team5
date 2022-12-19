@@ -2,6 +2,10 @@
 
 ## InstaGive
 
+## Donation Delivery App
+
+![InstaGive Logo](InstaGive_Logo.png)
+
 ## Team members
 
 | Name  | Email |
@@ -9,7 +13,6 @@
 | Leanna Machado |  [lm77202p@pace.edu](mailto:lm77202p@pace.edu) |
 | Ceasar Lugo | [cl3284p@pace.edu](mailto:cl3284p@pace.edu) |
 
-## Donation Delivery App
 
 ## Idea Proposal
 [Idea Proposal](https://docs.google.com/document/d/1OlauvMVb_RuM6WRmo24Toe3s6CLUxb4O/edit?usp=sharing&ouid=104226649781356370789&rtpof=true&sd=true)
