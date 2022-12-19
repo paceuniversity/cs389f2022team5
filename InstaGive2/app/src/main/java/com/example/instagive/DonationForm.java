@@ -2,6 +2,7 @@ package com.example.instagive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,6 +20,8 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
 
 
 public class DonationForm extends AppCompatActivity {
@@ -52,7 +56,7 @@ public class DonationForm extends AppCompatActivity {
 
         EditText addressEditText = (EditText) findViewById(R.id.inputFormPickupAddress);
 
-        EditText dateEditText = (EditText) findViewById(R.id.inputFormDate);
+        Button dateEdit =  findViewById(R.id.inputFormDate);
 
         EditText noteEditText = (EditText) findViewById(R.id.inputMultiLineNotes);
 
@@ -62,6 +66,14 @@ public class DonationForm extends AppCompatActivity {
         spinnerTime.setAdapter(adapter);
         Button submitFormButton = findViewById(R.id.buttonSubmitForm);
 
+
+        dateEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setDate(dateEdit);
+            }
+        });
+
         submitFormButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -70,7 +82,7 @@ public class DonationForm extends AppCompatActivity {
                  items = quantityEditText.getText().toString();
                  address = addressEditText.getText().toString();
                  phone = phoneNumEditText.getText().toString();
-                 date = dateEditText.getText().toString();
+                 date = dateEdit.getText().toString();
                  notes = noteEditText.getText().toString();
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 if (radioId == -1)
@@ -102,8 +114,8 @@ public class DonationForm extends AppCompatActivity {
                         addressEditText.setError("Your pickup address is required!");
                     } else if (TextUtils.isEmpty(phone)) {
                         phoneNumEditText.setError("Phone number is required!");
-                    } else if (TextUtils.isEmpty(date)) {
-                        dateEditText.setError("Date is required!");
+                    } else if (date.equals("Select Date")) {
+                        dateEdit.setError("Invalid Date!");
                     } else if (time.equals("Time")) {
                         Toast.makeText(DonationForm.this, "Please select a pickup time!", Toast.LENGTH_SHORT).show();
                     } else {
@@ -127,6 +139,40 @@ public class DonationForm extends AppCompatActivity {
 
 
     }
+
+    public void setDate(Button dateEditText) {
+        final Calendar c = Calendar.getInstance();
+
+        // on below line we are getting current date and our future our day, month and year.
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+
+        // on below line we are creating a variable for date picker dialog.
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                // on below line we are passing context.
+                DonationForm.this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+
+                            // on below line we are setting date to our button.
+                        dateEditText.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+                    }
+                },
+                // on below line we are passing year month and day for selected date in our date picker.
+                year, month, day);
+
+        // display our date picker dialog.
+        datePickerDialog.show();
+
+        //credit to GEEKSFORGEEKS: https://www.geeksforgeeks.org/datepicker-in-android/
+    }
+
+
+
 
    /* public void launchFormSummary(View view) {
 
