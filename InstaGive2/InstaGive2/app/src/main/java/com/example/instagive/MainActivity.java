@@ -56,12 +56,13 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     TextView profileName, profileEmail, profileUsername, profilePassword;
     TextView titleName, titleUsername;
+    private int donoCheck;
 
     Button editProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+       /* binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -71,8 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(binding.navView, navController); */
+        setContentView(R.layout.activity_main);
         profileUsername = findViewById(R.id.inputName);
+
         // setContentView(R.layout.activity_main);
        /* profileName = findViewById(R.id.profileName);
         profileEmail = findViewById(R.id.profileEmail);
@@ -82,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         titleUsername = findViewById(R.id.titleUsername);
         editProfile = findViewById(R.id.editButton); */
         readAllUserData();
+        donoCheck = getDonoCheck();
+
         /*editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,34 +115,35 @@ public class MainActivity extends AppCompatActivity {
         //}
         //else{
             String userUsername = profileUsername.getText().toString().trim();
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-            Query checkUserDatabase = reference.orderByChild("userName").equalTo(userUsername);
-            checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.exists()){
-                        String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
-                        String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                        String phoneFromDB = snapshot.child(userUsername).child("phone").getValue(String.class);
-                        String usernameFromDB = snapshot.child(userUsername).child("userName").getValue(String.class);
-                        String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
-                        int donationsFromDB = snapshot.child(userUsername).child("donations").getValue(Integer.class);
-                        Intent intent = new Intent(MainActivity.this, DonationForm.class);
-                        Bundle form = new Bundle();
-                        form.putString("name", nameFromDB);
-                        form.putString("email", emailFromDB);
-                        form.putString("phone", phoneFromDB);
-                        form.putString("username", usernameFromDB);
-                        form.putString("password", passwordFromDB);
-                        form.putInt("donations", donationsFromDB);
-                        intent.putExtras(form);
-                        startActivity(intent);
-                    }
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = reference.orderByChild("userName").equalTo(userUsername);
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
+                    String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
+                    String phoneFromDB = snapshot.child(userUsername).child("phone").getValue(String.class);
+                    String usernameFromDB = snapshot.child(userUsername).child("userName").getValue(String.class);
+                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+                    int donationsFromDB = snapshot.child(userUsername).child("donations").getValue(Integer.class);
+                    donoCheck = donationsFromDB;
+                    Intent intent = new Intent(MainActivity.this, DonationForm.class);
+                    Bundle form = new Bundle();
+                    form.putString("name", nameFromDB);
+                    form.putString("email", emailFromDB);
+                    form.putString("phone", phoneFromDB);
+                    form.putString("username", usernameFromDB);
+                    form.putString("password", passwordFromDB);
+                    form.putInt("donations", donationsFromDB);
+                    intent.putExtras(form);
+                    startActivity(intent);
                 }
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
-            });
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
        // }
     }
 
@@ -159,35 +165,48 @@ public class MainActivity extends AppCompatActivity {
         profilePassword.setText(passwordUser); */
     }
     public void editUserData(){
-        String userUsername = profileUsername.getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("userName").equalTo(userUsername);
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
-                    String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                    String phoneFromDB = snapshot.child(userUsername).child("phone").getValue(String.class);
-                    String usernameFromDB = snapshot.child(userUsername).child("userName").getValue(String.class);
-                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
-                    int donationsFromDB = snapshot.child(userUsername).child("donations").getValue(Integer.class);
-                    Intent intent = new Intent(MainActivity.this, EditProfile.class);
-                    Bundle form = new Bundle();
-                    form.putString("name", nameFromDB);
-                    form.putString("email", emailFromDB);
-                    form.putString("phone", phoneFromDB);
-                    form.putString("username", usernameFromDB);
-                    form.putString("password", passwordFromDB);
-                    form.putInt("donations", donationsFromDB);
-                    intent.putExtras(form);
-                    startActivity(intent);
+
+       /* EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        String name = nameEditText.getText().toString();
+        if(name.isEmpty()) {
+         Toast.makeText(MainActivity.this, "Please enter your username", Toast.LENGTH_SHORT).show();
+        }
+        else if(!name.equals("")){
+
+        }
+        else { */
+            String userUsername = profileUsername.getText().toString().trim();
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+            Query checkUserDatabase = reference.orderByChild("userName").equalTo(userUsername);
+            checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
+                        String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
+                        String phoneFromDB = snapshot.child(userUsername).child("phone").getValue(String.class);
+                        String usernameFromDB = snapshot.child(userUsername).child("userName").getValue(String.class);
+                        String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+                        int donationsFromDB = snapshot.child(userUsername).child("donations").getValue(Integer.class);
+
+                        Intent intent = new Intent(MainActivity.this, EditProfile.class);
+                        Bundle form = new Bundle();
+                        form.putString("name", nameFromDB);
+                        form.putString("email", emailFromDB);
+                        form.putString("phone", phoneFromDB);
+                        form.putString("username", usernameFromDB);
+                        form.putString("password", passwordFromDB);
+                        form.putInt("donations", donationsFromDB);
+                        intent.putExtras(form);
+                        startActivity(intent);
+                    }
                 }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            }); //end of else
+
     }
 
     @Override
@@ -198,12 +217,35 @@ public class MainActivity extends AppCompatActivity {
         //return super.onCreateOptionsMenu(menu);
     }
 
+
+    private int getDonoCheck()
+    {
+        String userUsername = profileUsername.getText().toString().trim();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = reference.orderByChild("userName").equalTo(userUsername);
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    int donationsFromDB = snapshot.child(userUsername).child("donations").getValue(Integer.class);
+                    donoCheck = donationsFromDB;
+
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+        return donoCheck;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = getIntent();
        // Bundle mBundle = new Bundle();
        // mBundle = getIntent().getExtras();
        // intent.putExtras(mBundle);
+       // donoCheck = getDonoCheck();
 
         switch (item.getItemId()) {
             case R.id.contact:
@@ -219,15 +261,21 @@ public class MainActivity extends AppCompatActivity {
                // startActivity(intent);
                 return true;
             case R.id.history:
+                donoCheck = getDonoCheck();
+                if(donoCheck>0)
+                {
+                    Intent history = new Intent(MainActivity.this, History.class);
+                    //intent.putExtra(EXTRA_MESSAGE, mMessage);
+                    String username = profileUsername.getText().toString().trim();
+                    history.putExtra("username", username);
+                    startActivity(history);
+                    return true;
+                }
+                   else {
 
-                   Intent  history = new Intent(MainActivity.this, History.class);
-
-                //intent.putExtra(EXTRA_MESSAGE, mMessage);
-                String username = profileUsername.getText().toString().trim();
-                history.putExtra("username",username);
-                startActivity(history);
-                return true;
-
+                    Toast.makeText(MainActivity.this, "Click 'DONATE' to submit your first request!", Toast.LENGTH_LONG).show();
+                    return false;
+                }
         }
         return super.onOptionsItemSelected(item);
 

@@ -69,13 +69,15 @@ public class DonationSummary extends AppCompatActivity {
 
         submitFormButton.setOnClickListener(new View.OnClickListener()
             {
-                @Override
+              @Override
                 public void onClick(View view){
-                   reference.child(nameDB).child("donations").setValue(dono+1);
-                    dono = dono+1;
+                  reference.child(nameDB).child("donations").setValue(dono+1);
+                   dono = dono+1;
                     String donoTitle = "Donation " +dono+": "+item_name;
-                    donationClass donation = new donationClass(user_name,cell,pickUP,nameDB,date,item_name,note,time, donoTitle,organization);
-                    reference.child(nameDB).child("history").child(donoTitle).setValue(donation);
+
+                  String histTitle = "Donation " +dono+": "+item_name+ " | Date: "+date+ " | Time: "+time+" | Address: "+pickUP+ " | Organization: "+organization;
+                   donationClass donation = new donationClass(user_name,cell,pickUP,nameDB,date,item_name,note,time, donoTitle,organization,histTitle,dono);
+                   reference.child(nameDB).child("history").child(donoTitle).setValue(donation);
                    // reference.child(nameDB).child("history").child(donoTitle).push().setValue(donation);
 
                 Intent intent = new Intent(DonationSummary.this,Confirmation.class);

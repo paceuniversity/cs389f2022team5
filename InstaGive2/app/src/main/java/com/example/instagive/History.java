@@ -1,6 +1,5 @@
 package com.example.instagive;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -44,15 +43,10 @@ public class History extends AppCompatActivity{
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Map<String, donationClass> map = (Map<String, donationClass>) dataSnapshot.getValue();
                 String title = map.toString();
-                String current = title;
-                String [] modify = current.split(", number=");
-                current = modify[0];
-                String [] modify2 = current.split(", hisTitle=");
-                String result = modify2[1];
 
 
-                // String value = dataSnapshot.child(title).getValue(donationClass.class).toString();
-                arrayList.add(result);
+               // String value = dataSnapshot.child(title).getValue(donationClass.class).toString();
+                arrayList.add(title);
                 arrayAdapter = new ArrayAdapter<String>(History.this, android.R.layout.simple_list_item_1, arrayList);
                 listView.setAdapter(arrayAdapter);
 

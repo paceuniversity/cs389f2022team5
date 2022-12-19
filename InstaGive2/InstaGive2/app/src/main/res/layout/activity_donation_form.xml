@@ -19,31 +19,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:itemTextColor="@color/Blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteY="68dp" />
 
     <TextView
         android:id="@+id/textFormTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="104dp"
         android:text="@string/donation_form"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/Blue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view" />
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main2"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <TextView
         android:id="@+id/textFormDescription"
@@ -54,7 +43,8 @@
         android:textColor="@color/Blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFormTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textFormTitle"
+        android:fontFamily="sans-serif-condensed"/>
 
     <EditText
         android:id="@+id/inputNameOfItem"
@@ -101,13 +91,14 @@
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/inputFormPickupAddress" />
 
-    <EditText
+    <Button
         android:id="@+id/inputFormDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:ems="10"
-        android:hint="@string/inputDate"
-        android:inputType="date"
+        android:textColor="@color/Light_Yellow"
+        android:text="Select Date"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/inputFormPhoneNum" />
@@ -118,6 +109,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#0D3B66"
         android:onClick="launchFormSummary"
+        android:textColor="@color/Light_Yellow"
         android:text="@string/submit_formButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +135,8 @@
         android:layout_marginStart="16dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFormCategory">
+        app:layout_constraintTop_toBottomOf="@+id/textFormCategory"
+        >
 
 
         <RadioButton
@@ -155,7 +148,8 @@
             android:textColor="@color/Blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <RadioButton
             android:id="@+id/radioButtonToys"
@@ -167,7 +161,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.655"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <RadioButton
             android:id="@+id/radioButtonToiletries"
@@ -179,7 +174,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.949"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <RadioButton
             android:id="@+id/radioButtonAnimal"
@@ -188,7 +184,8 @@
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
             android:text="@string/categoryFour"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
 
         <RadioButton
@@ -198,7 +195,8 @@
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
             android:text="@string/categoryFive"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
 
         <RadioButton
@@ -208,7 +206,8 @@
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
             android:text="@string/categorySix"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
 
         <RadioButton
@@ -218,7 +217,8 @@
             android:layout_weight="1"
             android:onClick="checkCategoryButton"
             android:text="@string/categorySeven"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
     </RadioGroup>
 
@@ -241,10 +241,10 @@
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/buttonSubmitForm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputFormDate"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.172" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

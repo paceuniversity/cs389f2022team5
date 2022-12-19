@@ -26,7 +26,8 @@
             android:textAlignment="center"
             android:textColor="@color/Blue"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
             android:id="@+id/editPhone"
@@ -40,7 +41,8 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:padding="8dp"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
             android:id="@+id/editEmail"
@@ -53,8 +55,10 @@
             android:text="Email: instagive2022@gmail.com"
             android:textStyle="bold"
             android:textSize="20sp"
+
             android:padding="8dp"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
             android:id="@+id/editInstagram"
@@ -66,9 +70,11 @@
             android:drawablePadding="8dp"
             android:text="Instagram: @instaglve"
             android:textStyle="bold"
+            android:autoLink="web"
             android:textSize="20sp"
             android:padding="8dp"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
             android:id="@+id/editFB"
@@ -80,9 +86,11 @@
             android:drawablePadding="8dp"
             android:text="Facebook: Insta Give"
             android:textStyle="bold"
+            android:autoLink="web"
             android:textSize="20sp"
             android:padding="8dp"
-            android:textColor="@color/Blue" />
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
             android:id="@+id/editDiscord"
@@ -96,18 +104,26 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:padding="8dp"
-            android:textColor="@color/Blue" />
+            android:autoLink="web"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
-        <Button
-            android:id="@+id/saveButton"
+        <TextView
+            android:id="@+id/editAddress"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Blue"
-            android:text="Submit A Request"
-            android:textColor="@color/Light_Yellow"
-            android:textSize="18sp"
-            app:cornerRadius="20dp" />
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Based at: One Pace Plaza NY, NY 10083"
+            android:textStyle="bold"
+            android:autoLink="map"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
 
         <ImageView
             android:id="@+id/imageView4"

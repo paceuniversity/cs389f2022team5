@@ -1,38 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Light_Yellow"
-    android:textAlignment="textEnd"
-    tools:context=".Contact">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/yellow_background"
+    tools:context=".EditProfile">
 
-    <TextView
-        android:id="@+id/textViewMissionTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="@string/contact"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:textColor="@color/Blue"
-        android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewMissionTitle">
+    <LinearLayout
+        android:layout_width="396dp"
+        android:layout_height="695dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:ignore="ExtraText">
 
         <TextView
-            android:id="@+id/textViewMissionStatement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="5sp"
-            android:padding="10dp"
-            android:text="@string/contactInfo"
+            android:text="Contact"
+            android:textAlignment="center"
             android:textColor="@color/Blue"
-            android:textSize="25sp"
-            android:textStyle="bold"/>
-    </ScrollView>
-</RelativeLayout>
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Phone: 1-800-InstaGive"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Email: instagive2022@gmail.com"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Instagram: @instaglve"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editFB"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Facebook: Insta Give"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editDiscord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Discord: InstaGive"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:autoLink="web"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <TextView
+            android:id="@+id/editAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:drawableLeft="@drawable/yellow_background"
+            android:drawablePadding="8dp"
+            android:text="Based at: One Pace Plaza NY, NY 10083"
+            android:textStyle="bold"
+            android:autoLink="map"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/Blue"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/instagive" />
+    </LinearLayout>
+
+</LinearLayout>

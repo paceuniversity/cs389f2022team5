@@ -53,9 +53,7 @@ Our target users are those who have items they don’t use anymore/often that th
         <item>Boys and Girls Club of America</item>
         <item>Ronald McDonald House Charities</item>
         <item>ASPCA</item>
-        <item>Local Shelter</item>
-        <item>Local Animal Shelter</item>
-        <item>Local Soup Kitchen</item>
+
     </string-array>
 
     <string-array name="pickupTime">
