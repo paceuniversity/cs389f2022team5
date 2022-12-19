@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonationForm">
+    android:background="@color/Light_Yellow"
+    tools:context=".Confirmation">
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main2"
@@ -20,46 +21,34 @@
         app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:itemTextColor="#0D3B66"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteY="68dp" />
 
     <TextView
         android:id="@+id/textEditTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:text="Thank You!"
-        android:textColor="#0D3B66"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view"/>
-
-
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main2"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="32dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#0D3B66"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_view" />
+        app:layout_constraintTop_toBottomOf="@+id/textEditTitle"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <Button
         android:id="@+id/aboutButton"
@@ -67,11 +56,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#0D3B66"
         android:onClick="launchFormSummary"
-        android:text="Learn More"
+        android:text="@string/LearnMore_ButtonText"
+        android:textColor="@color/Light_Yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paragraph" />
+        app:layout_constraintTop_toBottomOf="@+id/paragraph"
+        app:layout_constraintVertical_bias="0.366"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <TextView
         android:id="@+id/paragraph"
@@ -79,13 +71,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:gravity="center"
         android:textColor="#0D3B66"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:fontFamily="sans-serif-condensed-medium"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -98,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/result"
         app:srcCompat="@drawable/instagive" />
 
-    tools:context=".Confirmation">
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
