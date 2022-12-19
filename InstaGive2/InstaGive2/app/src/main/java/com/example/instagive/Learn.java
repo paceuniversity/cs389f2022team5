@@ -57,7 +57,7 @@ private Button link;
                 break;
 
             case "ASPCA":
-                result.setText("The Boys and Girls Club of America is an organization that provides youth from all walks of life with opportunities for a better future as well as a safe haven today.\n\n Mission Statement: \nTo enable all young people, especially those who need us most, to reach their full potential as productive, caring, responsible citizens. \n\nA link to their website with more information can be accessed by clicking the learn more button below.");
+                result.setText("The ASPCA is an organization that provides critical services, care, and resources for animals in need through adoption, fostering, veterinary and spay/neuter services and more.\n\n Mission Statement: \nTo provide effective means for the prevention of cruelty to animals throughout the United States. \n\nA link to their website with more information can be accessed by clicking the learn more button below.");
                 setLink("https://www.aspca.org/");
                 break;
 

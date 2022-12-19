@@ -22,7 +22,7 @@ public class Destination extends AppCompatActivity implements AdapterView.OnItem
     private String pickUP;
     private Spinner spinnerOrganizations;
     private ImageView photo;
-    private String [] organizations = {"American Red Cross","Salvation Army", "Feeding America","YMCA of the USA", "Boys and Girls Club of America", "Ronald McDonald House Charities", "ASPCA"};
+    private String [] organizations = {"Select Organization", "American Red Cross","Salvation Army", "Feeding America","YMCA of the USA", "Boys and Girls Club of America", "Ronald McDonald House Charities", "ASPCA"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +102,7 @@ public class Destination extends AppCompatActivity implements AdapterView.OnItem
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // on below line we are displaying toast message for selected item
+        if(!organizations[position].equals("Select Organization"))
         Toast.makeText(Destination.this, "" + organizations[position] + " Selected..", Toast.LENGTH_SHORT).show();
         String uri;
         int imageResource;
