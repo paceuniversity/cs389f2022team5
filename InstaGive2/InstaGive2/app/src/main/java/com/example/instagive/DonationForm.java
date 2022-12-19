@@ -2,36 +2,181 @@ package com.example.instagive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
+
 
 public class DonationForm extends AppCompatActivity {
 
     private static final String LOG_TAG = DonationForm.class.getSimpleName();
+    private EditText phoneNumEditText;
+    private String phone, quantity, items, address, date, notes, category, itemName,time,username, ogPhone;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private Bundle form;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_form);
-
+        reference = FirebaseDatabase.getInstance().getReference("users");
         radioGroup = findViewById(R.id.radioGroup);
         TextView textViewTitle = findViewById(R.id.textFormTitle);
         TextView textViewDescription = findViewById(R.id.textFormDescription);
         TextView textViewCategory = findViewById(R.id.textFormCategory);
+        phoneNumEditText = (EditText) findViewById(R.id.inputFormPhoneNum);
+        Intent intent = getIntent();
+        //String name = intent.getStringExtra("name");
+        username = intent.getStringExtra("username");
+        phone = intent.getStringExtra("phone");
+        ogPhone = phone;
+        showData();
 
         EditText itemNameEditText = (EditText) findViewById(R.id.inputNameOfItem);
-        String itemName = itemNameEditText.getText().toString(); //This it variable with users input - item name
 
+        EditText quantityEditText = (EditText) findViewById(R.id.inputQuantity);
+
+        EditText addressEditText = (EditText) findViewById(R.id.inputFormPickupAddress);
+
+        Button dateEdit =  findViewById(R.id.inputFormDate);
+
+        EditText noteEditText = (EditText) findViewById(R.id.inputMultiLineNotes);
+
+        Spinner spinnerTime =findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.pickupTime, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinnerTime.setAdapter(adapter);
+        Button submitFormButton = findViewById(R.id.buttonSubmitForm);
+
+
+        dateEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setDate(dateEdit);
+            }
+        });
+
+        submitFormButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                 itemName = itemNameEditText.getText().toString();
+                 items = quantityEditText.getText().toString();
+                 address = addressEditText.getText().toString();
+                 phone = phoneNumEditText.getText().toString();
+                 date = dateEdit.getText().toString();
+                 notes = noteEditText.getText().toString();
+                int radioId = radioGroup.getCheckedRadioButtonId();
+                if (radioId == -1)
+                    Toast.makeText(DonationForm.this, "Please select a category!", Toast.LENGTH_SHORT).show();
+                else {
+
+                    radioButton = findViewById(radioId);
+                     category = radioButton.getText().toString();
+
+                     time = spinnerTime.getSelectedItem().toString();
+
+                     form = getIntent().getExtras();
+                   // form.putString("name", name);
+                    form.putString("Item_Name", itemName);
+                    form.putString("Quantity", items);
+                    form.putString("Notes", notes);
+                    form.putString("Address", address);
+                    form.putString("phone", phone);
+                    form.putString("Date", date);
+                    form.putString("Category", category);
+                    form.putString("Time", time);
+
+
+                    if (TextUtils.isEmpty(itemName)) { //making fields required. Checking if empty
+                        itemNameEditText.setError("Item name is required!");
+                    } else if (TextUtils.isEmpty(items)) {
+                        quantityEditText.setError("Quantity of the item is required!");
+                    } else if (TextUtils.isEmpty(address)) {
+                        addressEditText.setError("Your pickup address is required!");
+                    } else if (TextUtils.isEmpty(phone)) {
+                        phoneNumEditText.setError("Phone number is required!");
+                    } else if (date.equals("Select Date")) {
+                        dateEdit.setError("Invalid Date!");
+                    } else if (time.equals("Time")) {
+                        Toast.makeText(DonationForm.this, "Please select a pickup time!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent intent = new Intent(DonationForm.this, Destination.class);
+                        intent.putExtras(form);
+                        startActivity(intent);
+               /* intent.putExtra("Name", name);
+                intent.putExtra("Quantity", items);
+                intent.putExtra("Notes", notes);
+                intent.putExtra("Address", address);
+                intent.putExtra("Phone Number", phone);
+                intent.putExtra("Date", date);
+                intent.putExtra("Category", category); */
+
+
+                    }
+                }
+            }
+        });
+
+
+
+    }
+
+    public void setDate(Button dateEditText) {
+        final Calendar c = Calendar.getInstance();
+
+        // on below line we are getting current date and our future our day, month and year.
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+
+        // on below line we are creating a variable for date picker dialog.
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                // on below line we are passing context.
+                DonationForm.this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+
+                            // on below line we are setting date to our button.
+                        dateEditText.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+                    }
+                },
+                // on below line we are passing year month and day for selected date in our date picker.
+                year, month, day);
+
+        // display our date picker dialog.
+        datePickerDialog.show();
+
+        //credit to GEEKSFORGEEKS: https://www.geeksforgeeks.org/datepicker-in-android/
+    }
+
+
+
+
+   /* public void launchFormSummary(View view) {
+
+       Log.d(LOG_TAG, "Form submittion button clicked!");
         EditText quantityEditText = (EditText) findViewById(R.id.inputQuantity);
         String quantity = quantityEditText.getText().toString();
 
@@ -52,11 +197,14 @@ public class DonationForm extends AppCompatActivity {
     }
 
     public void launchFormSummary(View view) {
+
         Log.d(LOG_TAG, "Form submittion button clicked!");
 
         Intent intent = new Intent(this,DonationSummary.class);
         startActivity(intent);
-    }
+
+    } */
+
 
     public void checkCategoryButton(View v) { //variable for which category is selected
         int radioId = radioGroup.getCheckedRadioButtonId();
@@ -64,6 +212,12 @@ public class DonationForm extends AppCompatActivity {
         radioButton = findViewById(radioId);
 
         //Toast.makeText(context: this, "Selected category: " + radioButton.getText(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void showData(){
+
+        phoneNumEditText.setText(phone);
+
     }
 
 }
