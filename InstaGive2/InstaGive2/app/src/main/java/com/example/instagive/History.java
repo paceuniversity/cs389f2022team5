@@ -38,6 +38,7 @@ public class History extends AppCompatActivity{
 
         listView = (ListView) findViewById(R.id.idLVDonations);
 
+        arrayList.add(username+"'s Donation History Below");
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
