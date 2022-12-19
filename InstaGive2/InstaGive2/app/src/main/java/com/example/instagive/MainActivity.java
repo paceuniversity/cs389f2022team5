@@ -53,7 +53,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
+   // private ActivityMainBinding binding;
     TextView profileName, profileEmail, profileUsername, profilePassword;
     TextView titleName, titleUsername;
     private int donoCheck;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     public void launchMissionStatement (View view){
 
         Intent intent = new Intent(this,MissionStatement.class);
-        EditText nameEditText = (EditText) findViewById(R.id.inputName);
+        TextView nameEditText =  findViewById(R.id.inputName);
         String name = nameEditText.getText().toString();
         intent.putExtra("Name", name);
         startActivity(intent);

@@ -11,14 +11,15 @@
         android:id="@+id/textEditTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/destination_selection"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="176dp"
-        android:fontFamily="sans-serif-condensed-medium"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textOrganization"
@@ -29,8 +30,9 @@
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         android:fontFamily="sans-serif-condensed-medium"/>
+
 
     <Button
         android:id="@+id/buttonSubmitForm"
@@ -38,54 +40,23 @@
         android:layout_height="66dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="#0D3B66"
-        android:text="Confirm Selection"
+        android:fontFamily="sans-serif-condensed-medium"
         android:onClick="launchFormSummary"
+        android:text="Confirm Selection"
+        android:textColor="@color/Light_Yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_organizations"
-        android:fontFamily="sans-serif-condensed-medium"/>
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="165dp"
-        android:layout_height="80dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <RadioButton
-            android:id="@+id/radioButtonPickUp"
-            android:layout_width="152dp"
-            android:layout_height="33dp"
-            android:onClick="checkCategoryButton"
-            android:text="@string/pick_Up"
-            tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="323dp"
-            android:fontFamily="sans-serif-condensed-medium"/>
-
-        <RadioButton
-            android:id="@+id/radioButtonCurrent"
-            android:layout_width="152dp"
-            android:layout_height="33dp"
-            android:layout_marginTop="0dp"
-            android:onClick="checkCategoryButton"
-            android:text="@string/current_loc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-            android:fontFamily="sans-serif-condensed-medium"/>
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Spinner
         android:id="@+id/spinner_organizations"
         android:layout_width="283dp"
         android:layout_height="83dp"
+        android:layout_marginTop="24dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textOrganization" />
 
@@ -93,12 +64,23 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Pick Up Address"
+        android:text="Select the organization to receive your donation below"
         android:textColor="#0D3B66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEditTitle"
         android:fontFamily="sans-serif-condensed-medium"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="217dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_organizations"
+        app:layout_constraintVertical_bias="0.138"
+        app:srcCompat="@drawable/blue_border" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

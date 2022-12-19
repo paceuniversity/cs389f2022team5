@@ -75,7 +75,7 @@ public class DonationSummary extends AppCompatActivity {
                    dono = dono+1;
                     String donoTitle = "Donation " +dono+": "+item_name;
 
-                  String histTitle = "Donation " +dono+": "+item_name+ " | Date: "+date+ " | Time: "+time+" | Address: "+pickUP+ " | Organization: "+organization;
+                  String histTitle = "Donation " +dono+": "+item_name+ " \nDate: "+date+ " \nTime: "+time+" \nAddress: "+pickUP+ " \nOrganization: "+organization;
                    donationClass donation = new donationClass(user_name,cell,pickUP,nameDB,date,item_name,note,time, donoTitle,organization,histTitle,dono);
                    reference.child(nameDB).child("history").child(donoTitle).setValue(donation);
                    // reference.child(nameDB).child("history").child(donoTitle).push().setValue(donation);

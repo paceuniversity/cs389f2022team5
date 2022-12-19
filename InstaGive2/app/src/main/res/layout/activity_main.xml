@@ -9,19 +9,6 @@
     android:paddingTop="?attr/actionBarSize">
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/bottom_nav_menu">
-
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -82,6 +69,7 @@
         android:layout_marginBottom="76dp"
         android:onClick="launchMissionStatement"
         android:text="Our Mission"
+        android:textColor="@color/Light_Yellow"
         app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment_activity_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -97,6 +85,7 @@
         android:backgroundTint="@color/Blue"
         android:onClick="launchDonationForm"
         android:text="@string/donateButtonText"
+        android:textColor="@color/Light_Yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
